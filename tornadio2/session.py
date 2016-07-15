@@ -21,7 +21,10 @@
     Active TornadIO2 connection session.
 """
 
-import urlparse
+try:
+    from urllib.parse import urlparse
+except ImportError:
+    import urlparse
 import logging
 
 
