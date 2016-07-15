@@ -22,6 +22,9 @@
 """
 import logging
 
+import sys
+if sys.version_info >= (3,0):
+    unicode = str
 
 logger = logging.getLogger('tornadio2.proto')
 
