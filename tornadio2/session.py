@@ -438,3 +438,6 @@ class Session(sessioncontainer.SessionBase):
             # TODO: Add global exception callback?
 
             raise
+    
+    def __lt__(self, other):
+        return self.remote_ip < other.remote_ip

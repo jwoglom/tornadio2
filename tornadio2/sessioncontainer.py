@@ -31,7 +31,7 @@ from random import random
 def _random_key():
     """Return random session key"""
     i = md5()
-    i.update('%s%s' % (random(), time()))
+    i.update(str('%s%s' % (random(), time())).encode('utf-8'))
     return i.hexdigest()
 
 
