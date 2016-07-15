@@ -429,7 +429,7 @@ class Session(sessioncontainer.SessionBase):
                 logger.error('Incoming error: %s' % msg_data)
             elif msg_type == proto.NOOP:
                 pass
-        except Exception, ex:
+        except Exception as ex:
             logger.exception(ex)
 
             # TODO: Add global exception callback?
